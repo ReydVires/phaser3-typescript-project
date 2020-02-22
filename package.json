@@ -1,8 +1,8 @@
 {
 	"name": "phaser-typescript-project",
 	"version": "3.22.0",
-	"description": "Phaser 3 starter template with TypeScript and webpack.",
-	"homepage": "",
+	"description": "Phaser 3 template with TypeScript and webpack.",
+	"homepage": "https://github.com/ReydVires/phaser3-typescript-project",
 	"main": "index.js",
 	"scripts": {
 		"start": "webpack-dev-server --config webpack/webpack.dev.js",
