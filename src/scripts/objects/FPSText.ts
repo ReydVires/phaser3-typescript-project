@@ -1,6 +1,6 @@
 export class FPSText extends Phaser.GameObjects.Text {
 
-	constructor(scene: Phaser.Scene) {
+	constructor (scene: Phaser.Scene) {
 		super(scene, 10, 10, '', <Phaser.Types.GameObjects.Text.TextStyle> {
 			color: 'black',
 			fontSize: '32px',
@@ -10,7 +10,7 @@ export class FPSText extends Phaser.GameObjects.Text {
 		this.setOrigin(0);
 	}
 
-	public update(): void {
+	public update (): void {
 		this.setText(`fps: ${Math.floor(this.scene.game.loop.actualFps)}`);
 	}
 

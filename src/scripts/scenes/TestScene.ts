@@ -7,7 +7,7 @@ export class TestScene extends Phaser.Scene {
 	private _fpsText: Phaser.GameObjects.Text;
 	private _phaserLogo: PhaserLogo;
 
-	constructor() {
+	constructor () {
 		super('TestScene');
 	}
 
@@ -15,7 +15,7 @@ export class TestScene extends Phaser.Scene {
 		console.log(`TestScene: For experimental only!`);
 	}
 
-	create(): void {
+	create (): void {
 		this._phaserLogo = new PhaserLogo(this, centerX, centerY);
 		this._fpsText = new FPSText(this);
 	 }

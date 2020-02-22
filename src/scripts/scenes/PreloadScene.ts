@@ -60,7 +60,7 @@ export class PreloadScene extends Phaser.Scene {
 		});
 	}
 
-	createLoadingText(x: number, y: number, height: number, text: string): void {
+	createLoadingText (x: number, y: number, height: number, text: string): void {
 		const loadingText = {
 			x: x,
 			y: y - (height + 8),
