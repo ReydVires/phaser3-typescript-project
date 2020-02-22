@@ -1,6 +1,7 @@
 import { PhaserLogo } from '../objects/PhaserLogo';
 import { FPSText } from '../objects/FPSText';
 import { centerX, centerY } from '../config';
+import { Helper } from '../utils/Helper';
 
 export class TestScene extends Phaser.Scene {
 
@@ -18,6 +19,7 @@ export class TestScene extends Phaser.Scene {
 	create (): void {
 		this._phaserLogo = new PhaserLogo(this, centerX, centerY);
 		this._fpsText = new FPSText(this);
+		Helper.drawDebugLine(this.add.graphics(), 64);
 	 }
 
 	update (): void {
