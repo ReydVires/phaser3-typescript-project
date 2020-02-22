@@ -18,7 +18,7 @@ export class Helper {
 
 	static drawDebugLine (graphics: Phaser.GameObjects.Graphics, dimension: number = 32): void {
 		Helper.log("Draw debug lines in " + dimension + "px");
-		const height = Math.round(SCREEN_HEIGHT / dimension);
+		const height = Math.ceil(SCREEN_HEIGHT / dimension);
 		const width = Math.ceil(SCREEN_WIDTH / dimension);
 
 		graphics.lineStyle(1, 0xecf0f1, 0.85);
