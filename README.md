@@ -1,4 +1,4 @@
-# Phaser 3 TypeScript Starter Template
+# Phaser 3 Eko Protect
 
 ## OS NPM Requirements
 **In Windows**
@@ -8,6 +8,8 @@ Need to be installed:
 > `$ npm install webpack-dev-server -g`
 
 > `$ npm install webpack -g`
+
+> `$ npm install webpack-cli -g`
 
 **OSX & Linux**
 
