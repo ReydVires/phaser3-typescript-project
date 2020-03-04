@@ -60,24 +60,13 @@ export class Helper {
 		graphics.strokePath();
 	}
 
-	static nextSceneFadeOut (currentScene: Phaser.Scene, sceneName: string): void {
+	static nextSceneFadeOut (currentScene: Phaser.Scene, sceneName: string, data?: any): void {
 		Helper.log("Go to scene: " + sceneName);
 		const cam = currentScene.cameras.main;
 		cam.once('camerafadeoutcomplete', () => {
-			currentScene.scene.start(sceneName);
+			currentScene.scene.start(sceneName, data);
 		});
 		cam.fadeOut(300);
-	}
-
-	static createDimBackground (graphics: Phaser.GameObjects.Graphics, width?: number, height?: number): Phaser.GameObjects.Graphics {
-		const rectangle = new Phaser.Geom.Rectangle(0, 0, width || SCREEN_WIDTH, height || SCREEN_HEIGHT);
-		graphics
-			.setScrollFactor(0)
-			.fillStyle(0x000, 0.8)
-			.fillRectShape(rectangle);
-		graphics.setInteractive(rectangle, Phaser.Geom.Rectangle.Contains)
-			.on('pointerup', () => Helper.log("All further inputs is blocked!"));
-		return graphics;
 	}
 
 	static checkPlatform (platformName: string | string[]): boolean {
