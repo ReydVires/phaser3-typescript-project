@@ -23,24 +23,28 @@ export class Helper {
 	}
 
 	static printPointerPos (scene: Phaser.Scene, onWorld?: boolean): void {
-		scene.input.on('pointerdown', (event: Phaser.Input.Pointer) => {
+		const posLabel = scene.add.text(0, 0, '(x, y)')
+			.setDepth(100)
+			.setOrigin(1);
+		scene.input
+		.on('pointermove', (event: Phaser.Input.Pointer) => {
 			if (Helper.isInDevelopment()) {
-				let x, y: number;
-				const type = onWorld ? 'world' : 'screen';
+				let localX, localY;
 				if (!onWorld) {
-					x = Math.round(event.x);
-					y = Math.round(event.y);
+					localX = Math.round(event.x);
+					localY = Math.round(event.y);
 				}
 				else {
-					x = Math.round(event.worldX);
-					y = Math.round(event.worldY);
+					localX = Math.round(event.worldX);
+					localY = Math.round(event.worldY);
 				}
-				Helper.log(`Pointer ${type} pos: (${x}, ${y})`);
+				posLabel.setPosition(localX, localY)
+					.setText(`(${localX}, ${localY})`);
 			}
 		});
 	}
 
-	static drawDebugLine (graphics: Phaser.GameObjects.Graphics, option?: LineOption): void {
+	static drawDebugLine (graphics: Phaser.GameObjects.Graphics, option?: LineOption, scene?: Phaser.Scene): void {
 		// Set default value
 		const dimension = option!.dimension ? option!.dimension : 32;
 		const WIN_HEIGHT = option!.height ? option!.height : SCREEN_HEIGHT;
@@ -55,6 +59,13 @@ export class Helper {
 			for (let col = 0; col < width; col++) {
 				graphics.moveTo(col * dimension, 0);
 				graphics.lineTo(col * dimension, WIN_HEIGHT);
+				if (scene) { // Experiment
+					const t = scene.add
+						.text(col * dimension, row * dimension, `(${col},${row})`,
+						<Phaser.Types.GameObjects.Text.TextStyle> {
+							fontSize: '8px'
+						});
+				}
 			}
 		}
 		graphics.strokePath();
@@ -64,7 +75,8 @@ export class Helper {
 		Helper.log("Go to scene: " + sceneName);
 		const cam = currentScene.cameras.main;
 		cam.once('camerafadeoutcomplete', () => {
-			currentScene.scene.start(sceneName, data);
+			// Passing zero `{}` object to clear based-scene variable
+			currentScene.scene.start(sceneName, data ? data : {});
 		});
 		cam.fadeOut(300);
 	}
@@ -88,6 +100,16 @@ export class Helper {
 			isCompatible = navigator.userAgent.indexOf(platformName) !== -1;
 		}
 		return isCompatible;
+	}
+
+	static fullscreenMode (): void {
+		if (!document.fullscreenElement) {
+			document.documentElement.requestFullscreen();
+		} else {
+			if (document.exitFullscreen) {
+				document.exitFullscreen();
+			}
+		}
 	}
 
 	static isInDevelopment (): boolean | undefined {

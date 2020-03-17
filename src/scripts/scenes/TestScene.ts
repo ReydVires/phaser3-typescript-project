@@ -19,7 +19,7 @@ export class TestScene extends Phaser.Scene {
 	create (): void {
 		this._phaserLogo = new PhaserLogo(this, centerX, centerY);
 		this._fpsText = new FPSText(this);
-		Helper.drawDebugLine(this.add.graphics(), 64);
+		Helper.drawDebugLine(this.add.graphics(), { dimension: 64 });
 	 }
 
 	update (): void {
