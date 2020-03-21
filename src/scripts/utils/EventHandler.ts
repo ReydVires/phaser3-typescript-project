@@ -1,4 +1,4 @@
-export class EventUIHandler {
+export class EventHandler {
 
 	private _eventStores: Map<string, Function>;
 	private _currentEvent: Phaser.Events.EventEmitter;

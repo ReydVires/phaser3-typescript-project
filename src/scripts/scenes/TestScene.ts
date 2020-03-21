@@ -2,8 +2,9 @@ import { PhaserLogo } from '../objects/PhaserLogo';
 import { FPSText } from '../objects/FPSText';
 import { centerX, centerY } from '../config';
 import { Helper } from '../utils/Helper';
+import { BaseScene } from '../components/abstract/BaseScene';
 
-export class TestScene extends Phaser.Scene {
+export class TestScene extends BaseScene {
 
 	private _fpsText: Phaser.GameObjects.Text;
 	private _phaserLogo: PhaserLogo;
@@ -13,6 +14,7 @@ export class TestScene extends Phaser.Scene {
 	}
 
 	init (): void {
+		super.init();
 		console.log(`TestScene: For experimental only!`);
 	}
 

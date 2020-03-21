@@ -1,8 +1,12 @@
+//#region Import scenes module
 import { BootScene } from './scenes/BootScene';
 import { PreloadScene } from './scenes/PreloadScene';
 import { MenuScene } from './scenes/MenuScene';
 import { GameScene } from './scenes/GameScene';
 import { TestScene } from './scenes/TestScene';
+import { UITestScene } from './scenes/UITestScene';
+
+//#endregion
 
 export const SCREEN_WIDTH: number = 720;
 export const SCREEN_HEIGHT: number = 1280;
@@ -14,7 +18,8 @@ const scenes: Array<Function> = [
 	PreloadScene,
 	MenuScene,
 	GameScene,
-	TestScene
+	TestScene,
+	UITestScene
 ];
 
 export const Config: Phaser.Types.Core.GameConfig = {
