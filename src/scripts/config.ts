@@ -20,7 +20,7 @@ const scenes: Array<Function> = [
 export const Config: Phaser.Types.Core.GameConfig = {
 	title: 'Phaser 3 Game',
 	type: Phaser.AUTO,
-	backgroundColor: '#ffffff',
+	backgroundColor: '#3498db',
 	scale: {
 		parent: 'phaser-game',
 		mode: Phaser.Scale.FIT,

@@ -25,7 +25,7 @@ export class Helper {
 	static printPointerPos (scene: Phaser.Scene, onWorld?: boolean): void {
 		const posLabel = scene.add.text(0, 0, '(x, y)')
 			.setDepth(100)
-			.setOrigin(1);
+			.setOrigin(0.5, 1);
 		scene.input
 		.on('pointermove', (event: Phaser.Input.Pointer) => {
 			if (Helper.isInDevelopment()) {
@@ -81,6 +81,14 @@ export class Helper {
 		cam.fadeOut(300);
 	}
 
+	static async doTask (task: Function, params?: any, ...args: any[]): Promise<undefined> {
+		await new Promise(resolve => {
+			resolve();
+		});
+		task.call(this, params, args);
+		return;
+	}
+
 	static checkPlatform (platformName: string | string[]): boolean {
 		let isCompatible = false;
 		let platformMap = new Map<string, boolean>();
@@ -107,7 +115,7 @@ export class Helper {
 			document.documentElement.requestFullscreen();
 		} else {
 			if (document.exitFullscreen) {
-				document.exitFullscreen();
+				document.exitFullscreen(); 
 			}
 		}
 	}
