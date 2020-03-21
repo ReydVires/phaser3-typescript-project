@@ -11,6 +11,6 @@ Need to be installed:
 
 > `$ npm install webpack-cli -g`
 
-**OSX & Linux**
+**In OSX & Linux**
 
 Just `npm install` then `npm start`!
