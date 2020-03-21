@@ -1,4 +1,4 @@
-# Phaser 3 Eko Protect
+# Phaser 3 Typescript Protect
 
 ## OS NPM Requirements
 **In Windows**
