@@ -1,4 +1,5 @@
 import { centerX, centerY } from '../config';
+import { FlatButton } from '../components/FlatButton';
 
 export class GameScene extends Phaser.Scene {
 
@@ -19,7 +20,16 @@ export class GameScene extends Phaser.Scene {
 			.setOrigin(0.5);
 	}
 
-	create (): void {}
+	create (): void {
+		let testCount = 0;
+		const flatBtn = new FlatButton(this, centerX, 128)
+			.setJustOnce();
+		flatBtn.onClick(() => {
+			flatBtn.setText("MORE:" + ++testCount);
+		});
+		flatBtn.setText("MORE");
+
+	}
 
 	update (): void {
 		const enter = this.input.keyboard.addKey('ENTER');
