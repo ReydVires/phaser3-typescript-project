@@ -21,13 +21,11 @@ export class GameScene extends Phaser.Scene {
 	}
 
 	create (): void {
-		let testCount = 0;
-		const flatBtn = new FlatButton(this, centerX, 128)
-			.setJustOnce();
+		const flatBtn = new FlatButton(this, centerX, 128).justOnce();
 		flatBtn.onClick(() => {
-			flatBtn.setText("MORE:" + ++testCount);
+			this.scene.start('TestScene');
 		});
-		flatBtn.setText("MORE");
+		flatBtn.setText("PLAY");
 
 	}
 

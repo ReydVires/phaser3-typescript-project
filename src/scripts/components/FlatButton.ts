@@ -71,7 +71,6 @@ export class FlatButton extends Phaser.GameObjects.Rectangle {
 		if (!this._disable) {
 			this.setAlpha(0.925);
 		}
-		this._pressed = false;
 	}
 
 	public get label (): Phaser.GameObjects.Text {
@@ -83,7 +82,7 @@ export class FlatButton extends Phaser.GameObjects.Rectangle {
 		return this;
 	}
 
-	public setJustOnce (value: boolean = true): this {
+	public justOnce (value: boolean = true): this {
 		this._justOnce = value;
 		return this;
 	}
