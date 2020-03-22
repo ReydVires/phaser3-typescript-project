@@ -78,8 +78,11 @@ export class FlatButton extends Phaser.GameObjects.Rectangle {
 		return this._label;
 	}
 
-	public setText (text: string): this {
+	public setText (text: string, style?: Phaser.Types.GameObjects.Text.TextMetrics): this {
 		this._label?.setText(text);
+		if (style) {
+			this._label?.setStyle(style);
+		}
 		return this;
 	}
 
