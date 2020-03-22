@@ -1,5 +1,5 @@
 import { centerX, centerY } from '../config';
-import { FlatButton } from '../components/FlatButton';
+import { FlatButton } from '../components/UI/FlatButton';
 
 export class GameScene extends Phaser.Scene {
 
