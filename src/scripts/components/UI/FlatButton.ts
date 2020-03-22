@@ -45,7 +45,7 @@ export class FlatButton extends Phaser.GameObjects.Rectangle {
 	}
 
 	private handleDown (pointer: Phaser.Input.Pointer): void {
-		this.setAlpha(0.825);
+		this.setAlpha(0.8);
 		this._pressed = true;
 	}
 
@@ -53,7 +53,8 @@ export class FlatButton extends Phaser.GameObjects.Rectangle {
 		this.setAlpha(1);
 		if (this._pressed) {
 			this._pressed = false;
-			this._callback(this._argument);
+			this.scene.time
+				.delayedCall(25, this._callback.bind(this, this._argument));
 			if (this._justOnce) {
 				this.setDisable(true);
 			}
@@ -69,7 +70,7 @@ export class FlatButton extends Phaser.GameObjects.Rectangle {
 
 	private handleOver (pointer: Phaser.Input.Pointer): void {
 		if (!this._disable) {
-			this.setAlpha(0.925);
+			this.setAlpha(0.825);
 		}
 	}
 

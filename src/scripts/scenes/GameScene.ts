@@ -21,10 +21,10 @@ export class GameScene extends Phaser.Scene {
 	}
 
 	create (): void {
-		const flatBtn = new FlatButton(this, centerX, 128).justOnce();
-		flatBtn.onClick(() => {
-			this.scene.start('TestScene');
-		});
+		const flatBtn = new FlatButton(this, centerX, 128);//.justOnce();
+		flatBtn.onClick((sceneName: string) => {
+			this.scene.start(sceneName);
+		}, 'TestScene');
 		flatBtn.setText("PLAY");
 
 	}

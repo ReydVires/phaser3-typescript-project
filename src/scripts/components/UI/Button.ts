@@ -30,17 +30,15 @@ export class Button extends Phaser.GameObjects.Sprite {
 	}
 
 	private onClick (): void {
-		this.scene.time.addEvent({
-			delay: 25,
-			callback: () => {
+		this.scene.time
+			.delayedCall(25, () => {
 				if (this._callback) {
 					this._callback(this._argument);
 				}
 				else {
 					console.log('Callback is not set');
 				}
-			}
-		});
+			});
 	}
 
 	private initInteractive (): void {
