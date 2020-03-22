@@ -1,4 +1,4 @@
-import { Layer } from "../utils/Layer";
+import { Layer } from "../../utils/Layer";
 
 export class PopUpWindow extends Phaser.GameObjects.Container {
 

@@ -1,5 +1,5 @@
-import { SCREEN_WIDTH, SCREEN_HEIGHT } from "../config";
-import { Layer } from "../utils/Layer";
+import { SCREEN_WIDTH, SCREEN_HEIGHT } from "../../config";
+import { Layer } from "../../utils/Layer";
 
 export class DimBackground extends Phaser.GameObjects.Graphics {
 
