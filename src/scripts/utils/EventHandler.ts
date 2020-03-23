@@ -26,7 +26,6 @@ export class EventHandler {
 		if (this._eventStores.has(key)) {
 			this._currentEvent.emit(key, args);
 			if (!this._currentEvent.eventNames().includes(key)) {
-				console.log("Just printed when the event is 'once' only!", key);
 				this.removeEvent(key);
 			}
 		}
@@ -46,11 +45,16 @@ export class EventHandler {
 		}
 	}
 
-	public inspectEvents (): void {
-		console.log("Print all registered event keys:");
-		this._eventStores.forEach((value, key) => {
-			console.log(">>", key);
-		});
+	public inspectEvents (value?: string): boolean {
+		if (typeof value === 'undefined') {
+			console.log("Print all registered event keys:");
+			this._eventStores.forEach((val, key) => {
+				console.log(">>", key);
+			});
+		} else if (typeof value === 'string') {
+			return this._eventStores.has(value);
+		}
+		return false;
 	}
 
 }

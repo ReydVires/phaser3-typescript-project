@@ -32,7 +32,7 @@ export class FlatButton extends Phaser.GameObjects.Rectangle {
 	}
 
 	private initStyle (): void {
-		this.setStrokeStyle(3, 0x95a5a6, 0.85);
+		this.setStrokeStyle(2, 0x95a5a6, 0.8);
 		this.setFillStyle(0xfafafa);
 	}
 	
