@@ -1,9 +1,11 @@
-# Phaser 3 Typescript Protect
+# Phaser 3 Typescript Project
 
 ## OS NPM Requirements
-**In Windows**
+**WINDOWS**
 
-Need to be installed:
+Do `npm install` then `npm start`!
+
+If not work, need to be installed:
 
 > `$ npm install webpack-dev-server -g`
 
@@ -11,6 +13,6 @@ Need to be installed:
 
 > `$ npm install webpack-cli -g`
 
-**In OSX & Linux**
+**OSX & LINUX**
 
 Just `npm install` then `npm start`!
