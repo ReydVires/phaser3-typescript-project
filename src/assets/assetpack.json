@@ -16,6 +16,10 @@
             {
                 "key": "phaser-logo",
                 "url": "img_phaser-logo.png"
+            },
+            {
+                "key": "phaser_logo",
+                "url": "img_phaser_logo.png"
             }
         ]
     },
