@@ -3,14 +3,14 @@ export class Button extends Phaser.GameObjects.Sprite {
 	private _pressed: boolean = false;
 	private _callback: Function;
 	private _argument: unknown;
+	private _unpressedTexture: string;
 	private _pressedTexture: string;
-	private _justOnce: boolean = false;
-	private _noLongerActive: boolean = false;
 
-	constructor (scene: Phaser.Scene, x: number, y: number, texture: string, pressedTexture?: string) {
-		super(scene, x, y, texture);
+	constructor (scene: Phaser.Scene, x: number, y: number, unpressedTexture: string, pressedTexture?: string) {
+		super(scene, x, y, unpressedTexture);
 		scene.add.existing(this);
 		if (pressedTexture) {
+			this._unpressedTexture = unpressedTexture;
 			this.setPressedTexture(pressedTexture);
 		}
 		this.initInteractive();
@@ -26,7 +26,12 @@ export class Button extends Phaser.GameObjects.Sprite {
 	}
 
 	private onUp (): void {
-		this.setFrame(0);
+		if (this.texture.frameTotal > 2) {
+			this.setFrame(0);
+		}
+		else {
+			this.setTexture(this._unpressedTexture);
+		}
 	}
 
 	private onClick (): void {
@@ -36,7 +41,7 @@ export class Button extends Phaser.GameObjects.Sprite {
 					this._callback(this._argument);
 				}
 				else {
-					console.log('Callback is not set');
+					console.log('Button callback is not set');
 				}
 			});
 	}
@@ -49,15 +54,7 @@ export class Button extends Phaser.GameObjects.Sprite {
 			})
 			.on('pointerup', () => {
 				if (this._pressed) {
-					if (!this._justOnce) {
-						this.onClick();
-					}
-					else {
-						if (!this._noLongerActive) {
-							this.onClick();
-							this._noLongerActive = true;
-						}
-					}
+					this.onClick();
 				}
 				this.onUp();
 			})
@@ -70,17 +67,17 @@ export class Button extends Phaser.GameObjects.Sprite {
 	public setCallback (callback: Function, arg?: unknown): this {
 		this._argument = arg;
 		this._callback = (typeof callback === 'function') ? callback :
-			() => { console.log("Default"); };
+			() => { console.log("Button default callback"); };
+		return this;
+	}
+
+	public setUnpressedTexture (key: string): this {
+		this._unpressedTexture = key;
 		return this;
 	}
 
 	public setPressedTexture (texture: string): this {
 		this._pressedTexture = texture;
-		return this;
-	}
-
-	public justOnce (isJustOnce: boolean = true): this {
-		this._justOnce = isJustOnce;
 		return this;
 	}
 
