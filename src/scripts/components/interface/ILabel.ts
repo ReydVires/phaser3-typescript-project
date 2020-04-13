@@ -1,7 +1,7 @@
 export interface ILabel {
 
 	getLabel (): Phaser.GameObjects.Text;
-	setText (text: string): this;
+	setText (text: string, style?: Phaser.Types.GameObjects.Text.TextStyle): this;
 	setPosition (x: number, y?: number, z?: number): this;
 	setVisible (value: boolean): this;
 	setAlpha (value: number): this;

@@ -99,15 +99,6 @@ export class TapButton extends Phaser.GameObjects.Image implements ILabel {
 	/**
 	 * @override
 	 */
-	public setDepth (value: number): this {
-		super.setDepth(value);
-		this._label?.setDepth(value);
-		return this;
-	}
-
-	/**
-	 * @override
-	 */
 	public setVisible (value: boolean): this {
 		super.setVisible(value);
 		this._label?.setVisible(value);
@@ -117,9 +108,27 @@ export class TapButton extends Phaser.GameObjects.Image implements ILabel {
 	/**
 	 * @override
 	 */
+	public setAlpha (value: number): this {
+		super.setAlpha(value);
+		this._label?.setAlpha(value);
+		return this;
+	}
+
+	/**
+	 * @override
+	 */
 	public setScale (value: number): this {
 		super.setScale(value);
 		this._label?.setScale(value);
+		return this;
+	}
+
+	/**
+	 * @override
+	 */
+	public setDepth (value: number): this {
+		super.setDepth(value);
+		this._label?.setDepth(value);
 		return this;
 	}
 

@@ -139,6 +139,24 @@ export class Button extends Phaser.GameObjects.Sprite implements ILabel {
 	/**
 	 * @override
 	 */
+	public setScale (value: number): this {
+		super.setScale(value);
+		this._label?.setScale(value);
+		return this;
+	}
+
+	/**
+	 * @override
+	 */
+	public setDepth (value: number): this {
+		super.setScale(value);
+		this._label?.setScale(value);
+		return this;
+	}
+
+	/**
+	 * @override
+	 */
 	public setScrollFactor (value: number): this {
 		super.setScrollFactor(value);
 		this._label?.setScrollFactor(value);
