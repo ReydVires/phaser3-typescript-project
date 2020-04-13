@@ -1,14 +1,16 @@
 import { FlatButton } from '../components/UI/FlatButton';
 import { centerX, centerY } from '../config';
+import { BaseScene } from '../components/abstract/BaseScene';
 
-export class MenuScene extends Phaser.Scene {
+export class MenuViews extends BaseScene {
 
 	constructor () {
-		super('MenuScene');
+		super('MenuViews');
 	}
 
 	init (): void {
-		console.log(`MenuScene`);
+		super.init();
+		console.log(`MenuViews`);
 		const titleText = `Welcome to\nPhaser v${Phaser.VERSION}`;
 		this.add
 			.text(centerX, centerY * 0.8, titleText, {
