@@ -1,7 +1,7 @@
 //#region Import scenes module
 import { BootScene } from './scenes/BootScene';
 import { PreloadScene } from './scenes/PreloadScene';
-import { MenuScene } from './scenes/MenuScene';
+import { MenuViews } from './scenes/MenuViews';
 import { GameScene } from './scenes/GameScene';
 import { TestScene } from './scenes/TestScene';
 import { UITestScene } from './scenes/UITestScene';
@@ -16,7 +16,7 @@ export const centerY: number = SCREEN_HEIGHT / 2;
 const scenes: Array<Function> = [
 	BootScene,
 	PreloadScene,
-	MenuScene,
+	MenuViews,
 	GameScene,
 	TestScene,
 	UITestScene
