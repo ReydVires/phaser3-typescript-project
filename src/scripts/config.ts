@@ -2,7 +2,6 @@
 import { BootScene } from './scenes/BootScene';
 import { PreloadScene } from './scenes/PreloadScene';
 import { MenuViews } from './scenes/MenuViews';
-import { GameScene } from './scenes/GameScene';
 import { TestScene } from './scenes/TestScene';
 import { UITestScene } from './scenes/UITestScene';
 
@@ -17,7 +16,6 @@ const scenes: Array<Function> = [
 	BootScene,
 	PreloadScene,
 	MenuViews,
-	GameScene,
 	TestScene,
 	UITestScene
 ];
