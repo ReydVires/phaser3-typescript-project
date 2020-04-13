@@ -1,5 +1,6 @@
 export class TapButton extends Phaser.GameObjects.Image {
 
+	private _label: Phaser.GameObjects.Text;
 	private _pressed: boolean = false;
 	private _callback: Function;
 	private _argument: unknown;
@@ -8,6 +9,17 @@ export class TapButton extends Phaser.GameObjects.Image {
 		super(scene, x, y, texture);
 		scene.add.existing(this);
 		this.initInteractive();
+		this.initLabel();
+	}
+
+	private initLabel (): void {
+		this._label = this.scene.add.text(this.x, this.y, '', 
+			<Phaser.Types.GameObjects.Text.TextStyle> {
+				color: '#000',
+				fontSize: '32px',
+				align: 'center'
+			});
+		this._label.setOrigin(this.originX, this.originY);
 	}
 
 	private initInteractive (): void {
@@ -59,6 +71,71 @@ export class TapButton extends Phaser.GameObjects.Image {
 		this._callback = (typeof callback === 'function') ? callback :
 			() => { console.log("TapButton default callback"); };
 		return this;
+	}
+
+	public get label (): Phaser.GameObjects.Text {
+		return this._label;
+	}
+
+	public setText (text: string, style?: Phaser.Types.GameObjects.Text.TextStyle): this {
+		this._label?.setText(text);
+		if (style) {
+			this._label?.setStyle(style);
+		}
+		return this;
+	}
+
+	/**
+	 * @override
+	 */
+	public setPosition (x: number, y?: number, z?: number): this {
+		super.setPosition(x, y, z);
+		this._label?.setPosition(x, y, z);
+		return this;
+	}
+
+	/**
+	 * @override
+	 */
+	public setDepth (value: number): this {
+		super.setDepth(value);
+		this._label?.setDepth(value);
+		return this;
+	}
+
+	/**
+	 * @override
+	 */
+	public setVisible (value: boolean): this {
+		super.setVisible(value);
+		this._label?.setVisible(value);
+		return this;
+	}
+
+	/**
+	 * @override
+	 */
+	public setScale (value: number): this {
+		super.setScale(value);
+		this._label?.setScale(value);
+		return this;
+	}
+
+	/**
+	 * @override
+	 */
+	public setScrollFactor (value: number): this {
+		super.setScrollFactor(value);
+		this._label?.setScrollFactor(value);
+		return this;
+	}
+
+	/**
+	 * @override
+	 */
+	public destroy (): void {
+		this._label?.destroy();
+		super.destroy();
 	}
 
 }

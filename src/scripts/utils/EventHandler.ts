@@ -22,7 +22,7 @@ export class EventHandler {
 	}
 
 	public emit (key: string, ...args: any[]): void {
-		console.assert(this._eventStores.has(key), "Nothing to emit:", key);
+		// console.assert(this._eventStores.has(key), "Nothing to emit:", key);
 		if (this._eventStores.has(key)) {
 			this._currentEvent.emit(key, args);
 			if (!this._currentEvent.eventNames().includes(key)) {

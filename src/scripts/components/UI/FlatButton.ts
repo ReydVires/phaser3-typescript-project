@@ -148,4 +148,12 @@ export class FlatButton extends Phaser.GameObjects.Rectangle {
 		return this;
 	}
 
+	/**
+	 * @override
+	 */
+	public destroy (): void {
+		this._label?.destroy();
+		super.destroy();
+	}
+
 }
