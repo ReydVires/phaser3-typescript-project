@@ -119,7 +119,7 @@ export class Joystick extends Phaser.GameObjects.Sprite {
 	 */
 	public setAlpha (value: number): this {
 		super.setAlpha(value);
-		this._controllerSprite!.setAlpha(value);
+		this._controllerSprite?.setAlpha(value);
 		return this;
 	}
 
@@ -128,15 +128,15 @@ export class Joystick extends Phaser.GameObjects.Sprite {
 	 */
 	public setActive (value: boolean): this {
 		super.setActive(value);
-		this._controllerSprite!.setActive(value);
+		this._controllerSprite?.setActive(value);
 		if (value) {
-			this._touchScreenArea!.setInteractive();
+			this._touchScreenArea?.setInteractive();
 		}
 		else {
-			this._touchScreenArea!.disableInteractive();
+			this._touchScreenArea?.disableInteractive();
 			this.setPosition(this._originalPosition.x, this._originalPosition.y);
 		}
-		this._touchScreenArea!.setActive(value);
+		this._touchScreenArea?.setActive(value);
 		return this;
 	}
 
@@ -145,8 +145,8 @@ export class Joystick extends Phaser.GameObjects.Sprite {
 	 */
 	public setVisible (value: boolean): this {
 		super.setVisible(value);
-		this._controllerSprite!.setVisible(value);
-		this._touchScreenArea!.setVisible(value);
+		this._controllerSprite?.setVisible(value);
+		this._touchScreenArea?.setVisible(value);
 		return this;
 	}
 
@@ -155,7 +155,7 @@ export class Joystick extends Phaser.GameObjects.Sprite {
 	 */
 	public setPosition (x: number, y: number): this {
 		super.setPosition(x, y);
-		this._controllerSprite!.setPosition(x, y);
+		this._controllerSprite?.setPosition(x, y);
 		return this;
 	}
 
@@ -164,8 +164,8 @@ export class Joystick extends Phaser.GameObjects.Sprite {
 	 */
 	public setScrollFactor (value: number): this {
 		super.setScrollFactor(value);
-		this._controllerSprite!.setScrollFactor(value);
-		this._touchScreenArea!.setScrollFactor(value);
+		this._controllerSprite?.setScrollFactor(value);
+		this._touchScreenArea?.setScrollFactor(value);
 		return this;
 	}
 

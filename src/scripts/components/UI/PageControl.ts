@@ -9,8 +9,7 @@ export class PageControl<T> {
 		this._nextPages = new Array<T>();
 		if (Array.isArray(page)) {
 			if (page.length > 0) {
-				this._activePage = page[0];
-				page.shift(); // Discard first element
+				this._activePage = page.shift() as T;
 				this.addNextPage(page);
 			}
 		}

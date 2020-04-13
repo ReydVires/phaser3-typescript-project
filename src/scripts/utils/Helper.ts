@@ -46,9 +46,9 @@ export class Helper {
 
 	static drawDebugLine (graphics: Phaser.GameObjects.Graphics, option?: LineOption, scene?: Phaser.Scene): void {
 		// Set default value
-		const dimension = option!.dimension ? option!.dimension : 32;
-		const WIN_HEIGHT = option!.height ? option!.height : SCREEN_HEIGHT;
-		const WIN_WIDTH = option!.width ? option!.width : SCREEN_WIDTH;
+		const dimension = option?.dimension ? option?.dimension : 32;
+		const WIN_HEIGHT = option?.height ? option?.height : SCREEN_HEIGHT;
+		const WIN_WIDTH = option?.width ? option?.width : SCREEN_WIDTH;
 
 		const height = Math.ceil(WIN_HEIGHT / dimension);
 		const width = Math.ceil(WIN_WIDTH / dimension);
@@ -121,7 +121,7 @@ export class Helper {
 	}
 
 	static isInDevelopment (): boolean | undefined {
-		return Config.physics!.arcade!.debug;
+		return Config.physics?.arcade?.debug;
 	}
 
 	static log (message: string, arg?: any): void {
