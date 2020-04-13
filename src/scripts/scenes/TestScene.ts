@@ -23,6 +23,7 @@ export class TestScene extends BaseScene {
 		const space = this.input.keyboard.addKey('SPACE');
 		if (Phaser.Input.Keyboard.JustDown(space)) {
 			this._phaserLogo.jump();
+			this.eventHandler.emit('UI#destroy_fps');
 		}
 	}
 
