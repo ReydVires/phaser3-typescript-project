@@ -1,3 +1,6 @@
+import { GameManager } from "../components/GameManager";
+import { UserData } from "../components/UserData";
+
 export class BootScene extends Phaser.Scene {
 
 	constructor () {
@@ -6,6 +9,7 @@ export class BootScene extends Phaser.Scene {
 
 	init (): void {
 		console.log(`BootScene`);
+		GameManager.instance().register<UserData>('userdata', new UserData('123yd', 'ReydVires'));
 	}
 
 	create (): void {

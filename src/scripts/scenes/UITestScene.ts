@@ -5,6 +5,8 @@ import { TapButton } from "../components/UI/TapButton";
 import { Button } from "../components/UI/Button";
 import { HoldButton } from "../components/UI/HoldButton";
 import { Joystick } from "../components/UI/Joystick";
+import { GameManager } from "../components/GameManager";
+import { UserData } from "../components/UserData";
 
 export class UITestScene extends UIScene {
 
@@ -22,7 +24,12 @@ export class UITestScene extends UIScene {
 	create (): void {
 		this._fpsText = new FPSText(this);
 		new TapButton(this, 475, 256, 'phaser_logo')
-			.setText("TESTING", { fontStyle: 'bold' });
+			.setText("TESTING", { fontStyle: 'bold' })
+			.setCallback(() => {
+				let userData = GameManager.instance().service<UserData>('userdata');
+				console.log("inspect UserData:", userData.toString());
+				userData.setScore(userData.score + 10);
+			});
 		const btn = new Button(this, 180, 460, 'phaser-logo', 'phaser_logo')
 			.setText("CLICK ME!", { fontStyle: 'bold' })
 			.setCallback(() => {
