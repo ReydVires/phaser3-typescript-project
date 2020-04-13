@@ -1,4 +1,6 @@
-export class FlatButton extends Phaser.GameObjects.Rectangle {
+import { ILabel } from "../interface/ILabel";
+
+export class FlatButton extends Phaser.GameObjects.Rectangle implements ILabel {
 
 	private _label: Phaser.GameObjects.Text;
 	private _callback: Function;
@@ -69,7 +71,7 @@ export class FlatButton extends Phaser.GameObjects.Rectangle {
 		}
 	}
 
-	public get label (): Phaser.GameObjects.Text {
+	public getLabel(): Phaser.GameObjects.Text {
 		return this._label;
 	}
 

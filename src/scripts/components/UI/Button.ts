@@ -1,4 +1,6 @@
-export class Button extends Phaser.GameObjects.Sprite {
+import { ILabel } from "../interface/ILabel";
+
+export class Button extends Phaser.GameObjects.Sprite implements ILabel {
 
 	private _pressed: boolean = false;
 	private _callback: Function;
@@ -78,7 +80,7 @@ export class Button extends Phaser.GameObjects.Sprite {
 			});
 	}
 
-	public get label (): Phaser.GameObjects.Text {
+	public getLabel(): Phaser.GameObjects.Text {
 		return this._label;
 	}
 

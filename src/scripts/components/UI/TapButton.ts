@@ -1,4 +1,6 @@
-export class TapButton extends Phaser.GameObjects.Image {
+import { ILabel } from "../interface/ILabel";
+
+export class TapButton extends Phaser.GameObjects.Image implements ILabel {
 
 	private _label: Phaser.GameObjects.Text;
 	private _pressed: boolean = false;
@@ -73,7 +75,7 @@ export class TapButton extends Phaser.GameObjects.Image {
 		return this;
 	}
 
-	public get label (): Phaser.GameObjects.Text {
+	public getLabel(): Phaser.GameObjects.Text {
 		return this._label;
 	}
 
