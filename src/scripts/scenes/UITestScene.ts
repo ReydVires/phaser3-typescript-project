@@ -26,7 +26,7 @@ export class UITestScene extends UIScene {
 		const btn = new Button(this, 180, 400, 'phaser-logo', 'phaser_logo')
 			.setText("CLICK ME!", { fontStyle: 'bold' })
 			.setCallback(() => this.eventHandler.emit('UI#destroy_fps'));
-		btn.label.setFontSize(28);
+		btn.getLabel().setFontSize(28);
 		new HoldButton(this, 360, 640, 'phaser-logo');
 
 		this.registerEvent('destroy_fps', () => this._fpsText.destroy(), true);
