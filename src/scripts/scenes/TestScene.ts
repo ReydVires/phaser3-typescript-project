@@ -17,6 +17,9 @@ export class TestScene extends BaseScene {
 
 	create (): void {
 		this._phaserLogo = new PhaserLogo(this, centerX, centerY);
+		this.registerEvent('set_to_control', () => {
+			this.eventHandler.emit('UI#set_to_control', this._phaserLogo);
+		});
 	}
 
 	update (): void {
