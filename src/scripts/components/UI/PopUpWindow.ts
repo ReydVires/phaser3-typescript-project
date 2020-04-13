@@ -40,7 +40,7 @@ export class PopUpWindow extends Phaser.GameObjects.Container {
 	 * @override
 	 */
 	public setVisible (value: boolean): this {
-		this._windowTexture?.setVisible(value);
+		this._windowTexture!.setVisible(value);
 		super.setVisible(value);
 		return this;
 	}
