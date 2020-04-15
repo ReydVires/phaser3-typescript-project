@@ -16,6 +16,20 @@
             {
                 "key": "phaser-logo",
                 "url": "img_phaser-logo.png"
+            },
+            {
+                "key": "background_class",
+                "url": "img_background_class.png"
+            }
+        ]
+    },
+    "spritePack": {
+        "path": "assets/sprite",
+        "defaultType": "image",
+        "files": [
+            {
+                "key": "cupboard",
+                "url": "spr_cupboard.png"
             }
         ]
     },
@@ -24,9 +38,14 @@
 		"defaultType": "spritesheet",
         "files": [
             {
-                "key": "key",
-                "url": "key.png",
-                "frameConfig": { "frameWidth": 0, "frameHeight": 0 }
+                "key": "virtual_joystick",
+                "url": "UI/sheet_virtual_joystick.png",
+                "frameConfig": { "frameWidth": 128, "frameHeight": 128 }
+            },
+            {
+                "key": "arrow_focus",
+                "url": "UI/sheet_arrow_focus.png",
+                "frameConfig": { "frameWidth": 16, "frameHeight": 16 }
             }
         ]
 	},
