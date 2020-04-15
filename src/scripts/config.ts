@@ -8,8 +8,8 @@ import { UITestScene } from './scenes/UITestScene';
 
 //#endregion
 
-export const SCREEN_WIDTH: number = 720;
-export const SCREEN_HEIGHT: number = 1280;
+export const SCREEN_WIDTH: number = 360;
+export const SCREEN_HEIGHT: number = 640;
 export const centerX: number = SCREEN_WIDTH / 2;
 export const centerY: number = SCREEN_HEIGHT / 2;
 
@@ -23,9 +23,10 @@ const scenes: Array<Function> = [
 ];
 
 export const Config: Phaser.Types.Core.GameConfig = {
-	title: 'Phaser 3 Game',
+	title: 'Wacana The Game',
 	type: Phaser.AUTO,
 	backgroundColor: '#3498db',
+	seed: [Date.now().toString()],
 	scale: {
 		parent: 'phaser-game',
 		mode: Phaser.Scale.FIT,
@@ -40,12 +41,11 @@ export const Config: Phaser.Types.Core.GameConfig = {
 	physics: {
 		default: 'arcade',
 		arcade: {
-			debug: false,
-			gravity: { y: 400 }
+			debug: false
 		}
 	},
 	render: {
-		pixelArt: false,
+		pixelArt: true,
 		antialias: false
 	}
 };
