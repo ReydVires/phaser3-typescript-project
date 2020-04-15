@@ -1,0 +1,213 @@
+[
+	{
+		"key": "class_boundary",
+		"isPhysic": true,
+		"object": [
+			{
+				"name": "leftWall",
+				"texture": "",
+				"posX": 14,
+				"posY": 96,
+				"width": 16,
+				"height": 320,
+				"originX": 1,
+				"originY": 0,
+				"depth": "default"
+			},
+			{
+				"name": "rightWall",
+				"texture": "",
+				"posX": 350,
+				"posY": 96,
+				"width": 16,
+				"height": 320,
+				"originX": 0,
+				"originY": 0,
+				"depth": "default"
+			},
+			{
+				"name": "upWall",
+				"texture": "",
+				"posX": 16,
+				"posY": 72,
+				"width": 332,
+				"height": 16,
+				"originX": 0,
+				"originY": 1,
+				"depth": "default"
+			},
+			{
+				"name": "downWall",
+				"texture": "",
+				"posX": 16,
+				"posY": 408,
+				"width": 332,
+				"height": 16,
+				"originX": 0,
+				"originY": 0,
+				"depth": "default"
+			}
+		]
+	},
+	{
+		"key": "paper_boundary",
+		"isPhysic": true,
+		"object": [
+			{
+				"name": "downBoundPaper",
+				"texture": "",
+				"posX": 16,
+				"posY": 375,
+				"width": 332,
+				"height": 16,
+				"originX": 0,
+				"originY": 0,
+				"depth": "default"
+			}
+		]
+	},
+	{
+		"key": "class_interior",
+		"isPhysic": true,
+		"object": [
+			{
+				"name": "cupboard",
+				"texture": "cupboard",
+				"posX": 16,
+				"posY": 16,
+				"origin": 0,
+				"depth": "property"
+			}
+		]
+	},
+	{
+		"key": "teacher",
+		"props": {
+			"name": "teacher",
+			"texture": "teacher_idle",
+			"posX": 220,
+			"posY": 96,
+			"originX": 0,
+			"originY": 0.25,
+			"depth": "enemy"
+		}
+	},
+	{
+		"key": "enemies",
+		"object": [
+			{
+				"name": "student_table1",
+				"texture": "student_table1",
+				"posX": 16,
+				"posY": 416,
+				"originX": 0,
+				"originY": 0,
+				"depth": "enemy"
+			},
+			{
+				"name": "student_table2",
+				"texture": "student_table2",
+				"posX": 102,
+				"posY": 416,
+				"originX": 0,
+				"originY": 0,
+				"depth": "enemy"
+			},
+			{
+				"name": "student_table3",
+				"texture": "student_table3",
+				"posX": 188,
+				"posY": 416,
+				"originX": 0,
+				"originY": 0,
+				"depth": "enemy"
+			},
+			{
+				"name": "student_table4",
+				"texture": "student_table4",
+				"posX": 274,
+				"posY": 416,
+				"originX": 0,
+				"originY": 0,
+				"depth": "enemy"
+			}
+		]
+	},
+	{
+		"key": "cameos",
+		"object": [
+			{
+				"name": "studentTable10",
+				"texture": "studentable",
+				"posX": 188,
+				"posY": 480,
+				"originX": 0,
+				"originY": 0,
+				"depth": "enemy"
+			},
+			{
+				"name": "studentTable7",
+				"texture": "studentable",
+				"posX": 102,
+				"posY": 544,
+				"originX": 0,
+				"originY": 0,
+				"depth": "enemy"
+			},
+			{
+				"name": "student_table5",
+				"texture": "student_table5",
+				"posX": 16,
+				"posY": 480,
+				"originX": 0,
+				"originY": 0,
+				"depth": "enemy"
+			},
+			{
+				"name": "student_table6",
+				"texture": "student_table6",
+				"posX": 102,
+				"posY": 480,
+				"originX": 0,
+				"originY": 0,
+				"depth": "enemy"
+			},
+			{
+				"name": "student_table7",
+				"texture": "student_table7",
+				"posX": 274,
+				"posY": 544,
+				"originX": 0,
+				"originY": 0,
+				"depth": "enemy"
+			},
+			{
+				"name": "student_table8",
+				"texture": "student_table8",
+				"posX": 274,
+				"posY": 480,
+				"originX": 0,
+				"originY": 0,
+				"depth": "enemy"
+			},
+			{
+				"name": "student_table9",
+				"texture": "student_table9",
+				"posX": 16,
+				"posY": 544,
+				"originX": 0,
+				"originY": 0,
+				"depth": "enemy"
+			},
+			{
+				"name": "student_table10",
+				"texture": "student_table10",
+				"posX": 188,
+				"posY": 544,
+				"originX": 0,
+				"originY": 0,
+				"depth": "enemy"
+			}
+		]
+	}
+]

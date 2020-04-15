@@ -1,0 +1,746 @@
+[
+	{
+		"id": "level_1",
+		"title": "Gurindam 1",
+		"author": "tidak diketahui",
+		"poems": [
+			"Jika belajar besungguh-sungguh",
+			"Keberhasilan akan kau rengkuh"
+		],
+		"missSpell": [
+			"jerapah",
+			"bebek"
+		],
+		"punchLine": 0,
+		"feelsType": "undefined"
+	},
+	{
+		"id": "level_2",
+		"title": "Gurindam 2",
+		"author": "tidak diketahui",
+		"poems": [
+			"Gendang gendut tali kecapi",
+			"Berenang-renang ke tepian"
+		],
+		"missSpell": [
+			"godoh",
+			"kesepian"
+		],
+		"punchLine": 0,
+		"feelsType": "undefined"
+	},
+	{
+		"id": "level_3",
+		"title": "Gurindam 3",
+		"author": "tidak diketahui",
+		"poems": [
+			"Barang siapa tidak berilmu",
+			"Bagaikan kursi tidak bertumpu"
+		],
+		"missSpell": [
+			"beruang",
+			"kepala"
+		],
+		"punchLine": 0,
+		"feelsType": "undefined"
+	},
+	{
+		"id": "level_4",
+		"title": "Pantun 1",
+		"author": "tidak diketahui",
+		"poems": [
+			"Berakit-rakit ke hulu",
+			"Berenang-renang ke tepian",
+			"Bersakit-sakit dahulu",
+			"Bersenang-senang kemudian"
+		],
+		"missSpell": [
+			"kasur",
+			"restoran",
+			"kura kura",
+			"duar"
+		],
+		"punchLine": 0,
+		"feelsType": "undefined"
+	},
+	{
+		"id": "level_5",
+		"title": "Pantun 2",
+		"author": "tidak diketahui",
+		"poems": [
+			"Buah lemon buah pepaya",
+			"Malah membeli buah durian",
+			"Coba terka wahai saudara",
+			"Makin diisi kok makin ringan"
+		],
+		"missSpell": [
+			"burger",
+			"tajam atit euy",
+			"akret",
+			"duarlagi"
+		],
+		"punchLine": 4,
+		"feelsType": "happy"
+	},
+	{
+		"id": "level_6",
+		"title": "Pantun 3",
+		"author": "tidak diketahui",
+		"poems": [
+			"Kalau puan, puan cerana",
+			"Ambil gelas dalam peti",
+			"Kalau tuan bijak laksana",
+			"Binatang apa tanduk di kaki?"
+		],
+		"missSpell": [
+			"bukan tuan",
+			"kenapa",
+			"asek",
+			"apa dong"
+		],
+		"punchLine": 4,
+		"feelsType": "happy"
+	},
+	{
+		"id": "level_7",
+		"title": "Gurindam Dua Belas 1:1",
+		"author": "Raja Ali Haji",
+		"poems": [
+			"Barang siapa tiada memegang agama,",
+			"sekali-kali tiada boleh dibilangkan nama."
+		],
+		"missSpell": [
+			"dasar",
+			"naayo"
+		],
+		"punchLine": 0,
+		"feelsType": "undefined"
+	},
+	{
+		"id": "level_8",
+		"title": "Gurindam Dua Belas 1:2",
+		"author": "Raja Ali Haji",
+		"poems": [
+			"Barang siapa mengenal yang empat,",
+			"maka ia itulah orang yang makrifat."
+		],
+		"missSpell": [
+			"bukan saya",
+			"naayo"
+		],
+		"punchLine": 0,
+		"feelsType": "undefined"
+	},
+	{
+		"id": "level_9",
+		"title": "Gurindam Dua Belas 1:3",
+		"author": "Raja Ali Haji",
+		"poems": [
+			"Barang siapa mengenal diri,",
+			"maka telah mengenal akan Tuhan yang bahri."
+		],
+		"missSpell": [
+			"nama saya bebek",
+			"naayo"
+		],
+		"punchLine": 0,
+		"feelsType": "undefined"
+	},
+	{
+		"id": "level_10",
+		"title": "Gurindam Dua Belas 1:4",
+		"author": "Raja Ali Haji",
+		"poems": [
+			"Barang siapa mengenal akhirat,",
+			"tahulah ia dunia mudarat."
+		],
+		"missSpell": [
+			"beruang",
+			"kepala"
+		],
+		"punchLine": 2,
+		"feelsType": "angry"
+	},
+	{
+		"id": "level_11",
+		"title": "Nasehat Kepada Anak :1",
+		"author": "Raja Ali Haji",
+		"poems": [
+			"Dengarkan tuan ayahanda berperi,",
+			"Kepada anakanda muda bestari,",
+			"Jika benar kepada diri,",
+			"Masihat kebajikan ayahanda beri."
+		],
+		"missSpell": [
+			"Lakukan",
+			"jiwa lestari",
+			"kudu sangat",
+			"bukan saltik"
+		],
+		"punchLine": 0,
+		"feelsType": "undefined"
+	},
+	{
+		"id": "level_12",
+		"title": "Nasehat Kepada Anak :2",
+		"author": "Raja Ali Haji",
+		"poems": [
+			"Ayuhai anakanda muda remaja,",
+			"Jika anakanda mengerjakan raja,",
+			"Hati yang betul hendaklah disahaja,",
+			"Serta rajin pada bekerja."
+		],
+		"missSpell": [
+			"Ayujuga",
+			"tak pantas",
+			"timbal balik",
+			"jangan suka malas"
+		],
+		"punchLine": 2,
+		"feelsType": "angry"
+	},
+	{
+		"id": "level_13",
+		"title": "Nasehat Kepada Anak :3",
+		"author": "Raja Ali Haji",
+		"poems": [
+			"Mengerjakan gubernemen janganlah malas,",
+			"Zahir dan batin janganlah culas,",
+			"Jernihkan hati hendaklah ikhlas,",
+			"Seperti air di dalam gelas."
+		],
+		"missSpell": [
+			"jangan",
+			"ingat jangan",
+			"dibilangin jangan",
+			"eta"
+		],
+		"punchLine": 4,
+		"feelsType": "happy"
+	},
+	{
+		"id": "level_14",
+		"title": "Nasehat Kepada Anak :4",
+		"author": "Raja Ali Haji",
+		"poems": [
+			"Jika anakanda menjadi besar,",
+			"Tutur dan kata janganlah kasar,",
+			"Janganlah seperti orang sasar,",
+			"Banyaklah orang menaruh gusar."
+		],
+		"missSpell": [
+			"pasti",
+			"harus",
+			"wajib",
+			"ya itu akibatnya bambang"
+		],
+		"punchLine": 0,
+		"feelsType": "undefined"
+	},
+	{
+		"id": "level_15",
+		"title": "Nasehat Kepada Anak :5",
+		"author": "Raja Ali Haji",
+		"poems": [
+			"Tutur yang manis anakanda tuturkan,",
+			"Perangai yang lembut anakanda lakukan,",
+			"Hati yang sabar anakanda tetapkan,",
+			"Kemaluan orang anakanda fikirkan."
+		],
+		"missSpell": [
+			"stroberi",
+			"memikat",
+			"ketabahan",
+			"ketahuilah rasa malu empati dirimu"
+		],
+		"punchLine": 4,
+		"feelsType": "angry"
+	},
+	{
+		"id": "level_16",
+		"title": "Nasehat Kepada Anak :6",
+		"author": "Raja Ali Haji",
+		"poems": [
+			"Kesukaan orang anakanda cari,",
+			"Supaya hatinya jangan lari,",
+			"Masyurlah anakanda dalam negeri,",
+			"Sebab kelakuan bijak bestari."
+		],
+		"missSpell": [
+			"deklinasi",
+			"iri",
+			"harapan",
+			"harapan"
+		],
+		"punchLine": 0,
+		"feelsType": "undefined"
+	},
+	{
+		"id": "level_17",
+		"title": "Gurindam Dua Belas 2:1",
+		"author": "Raja Ali Haji",
+		"poems": [
+			"Barang siapa mengenal yang tersebut,",
+			"tahulah ia makna takut."
+		],
+		"missSpell": [
+			"sesuatu besar",
+			"naayo"
+		],
+		"punchLine": 0,
+		"feelsType": "undefined"
+	},
+	{
+		"id": "level_18",
+		"title": "Gurindam Dua Belas 2:2",
+		"author": "Raja Ali Haji",
+		"poems": [
+			"Barang siapa meninggalkan sembahyang,",
+			"seperti rumah tiada bertiang."
+		],
+		"missSpell": [
+			"naayo",
+			"hindari"
+		],
+		"punchLine": 0,
+		"feelsType": "undefined"
+	},
+	{
+		"id": "level_19",
+		"title": "Pantun 4",
+		"author": "tidak diketahui",
+		"poems": [
+			"Masuk ke hutan mencari lontar",
+			"Tapi memilih mengambil rotan",
+			"Kalaulah saudara memang pintar",
+			"Binatang apa lebar kepala dari badan?"
+		],
+		"missSpell": [
+			"lah kok",
+			"apa hubungannya",
+			"asek",
+			"apa dong"
+		],
+		"punchLine": 4,
+		"feelsType": "happy"
+	},
+	{
+		"id": "level_20",
+		"title": "Pantun Ketemu",
+		"author": "tidak diketahui",
+		"poems": [
+			"Suwe ora jamu,",
+			"Jamu pisan godhong waru,",
+			"Suwe ora ketemu,",
+			"Ketemu pisan ra isa turu.",
+			"Lama tidak minum jamu,",
+			"Minum jamu kali ini daun waru,",
+			"Lama tidak bertemu,",
+			"Bertemu sekali tak bisa tidur."
+		],
+		"missSpell": [
+			"asek",
+			"cihuy",
+			"yeehaa",
+			"emberrr",
+			"lah kok masih",
+			"gak mau",
+			"asek",
+			"geelaaa"
+		],
+		"punchLine": 4,
+		"feelsType": "happy"
+	},
+	{
+		"id": "level_21",
+		"title": "Syair Perahu :1",
+		"author": "Hamzah Fansuri",
+		"poems": [
+			"Inilah gerangan suatu madah,",
+			"mengarangkan syair terlalu indah,",
+			"membetuli jalan tempat berpindah,",
+			"di sanalah itikat diperbetuli sudah."
+		],
+		"missSpell": [
+			"wabah",
+			"menawan",
+			"selayaknya hidup",
+			"cakep"
+		],
+		"punchLine": 0,
+		"feelsType": "undefined"
+	},
+	{
+		"id": "level_22",
+		"title": "Syair Perahu :2",
+		"author": "Hamzah Fansuri",
+		"poems": [
+			"Wahai muda kenali dirimu,",
+			"ialah perahu tamsil tubuhmu,",
+			"tiadalah berapa lama hidupmu,",
+			"ke akhirat jua kekal diammu."
+		],
+		"missSpell": [
+			"cermin hidup",
+			"dijaga",
+			"men jem put ajal",
+			"perubahan"
+		],
+		"punchLine": 3,
+		"feelsType": "sad"
+	},
+	{
+		"id": "level_23",
+		"title": "Syair Perahu :3",
+		"author": "Hamzah Fansuri",
+		"poems": [
+			"Hai muda arif-budiman,",
+			"hasilkan kemudi dengan pedoman,",
+			"alat perahumu jua kerjakan,",
+			"itulah jalan membetuli insan."
+		],
+		"missSpell": [
+			"iya kamu",
+			"terarah",
+			"jangan lupa",
+			"demi Indonesia yang lebih baik"
+		],
+		"punchLine": 4,
+		"feelsType": "angry"
+	},
+	{
+		"id": "level_24",
+		"title": "Nasehat Kepada Anak :7",
+		"author": "Raja Ali Haji",
+		"poems": [
+			"Nasehat ayahanda anakanda fikirkan,",
+			"Keliru syaitan anakanda jagakan,",
+			"Orang berakal anakanda hampirkan,",
+			"Orang jahat anakanda jauhkan."
+		],
+		"missSpell": [
+			"MEMPERTANGGUNGJAWABKANNYA",
+			"",
+			"",
+			""
+		],
+		"punchLine": 1,
+		"feelsType": "angry"
+	},
+	{
+		"id": "level_25",
+		"title": "Nasehat Kepada Anak :8",
+		"author": "Raja Ali Haji",
+		"poems": [
+			"Setelah orang besar fikir yang karu,",
+			"Tidak mengikut pengajaran guru,",
+			"Tutur dan kata haru-biru,",
+			"Kelakuan seperti anjing pemburu."
+		],
+		"missSpell": [
+			"",
+			"",
+			"",
+			"laknat menyedihkan"
+		],
+		"punchLine": 0,
+		"feelsType": "undefined"
+	},
+	{
+		"id": "level_26",
+		"title": "Nasehat Kepada Anak :9",
+		"author": "Raja Ali Haji",
+		"poems": [
+			"Tingkah dan laku tidak kelulu,",
+			"Perkataan kasar keluar selalu,",
+			"Tidak memikirkan orang empunya malu,",
+			"Bencilah orang hilir dan hulu."
+		],
+		"missSpell": [
+			"cermat konsisten",
+			"kebun binatang",
+			"bakar",
+			"sampai mati"
+		],
+		"punchLine": 0,
+		"feelsType": "undefined"
+	},
+	{
+		"id": "level_27",
+		"title": "Nasehat Kepada Anak :10",
+		"author": "Raja Ali Haji",
+		"poems": [
+			"Itulah orang akalnya kurang,",
+			"Menyangka diri pandai seorang,",
+			"Takbur tidak membilan orang,",
+			"Dengan manusia selalu berperang."
+		],
+		"missSpell": [
+			"",
+			"",
+			"",
+			"mereka sendiri bertanya? kenapa bagaimana"
+		],
+		"punchLine": 1,
+		"feelsType": "sad"
+	},
+	{
+		"id": "level_28",
+		"title": "Nasehat Kepada Anak :11",
+		"author": "Raja Ali Haji",
+		"poems": [
+			"Anakanda jauhkan kelakukan ini,",
+			"Sebab kebencian Tuhan Rahmani,",
+			"Jiwa dibawa ke sana sini,",
+			"Tiada laku suatu dewani."
+		],
+		"missSpell": [
+			"harapan",
+			"",
+			"harapan",
+			"harapan"
+		],
+		"punchLine": 2,
+		"feelsType": "sad"
+	},
+	{
+		"id": "level_29",
+		"title": "Gurindam Dua Belas 3:1",
+		"author": "Raja Ali Haji",
+		"poems": [
+			"Apabila terpelihara mata,",
+			"sedikitlah cita-cita."
+		],
+		"missSpell": [
+			"lihatlah",
+			"kebunku"
+		],
+		"punchLine": 2,
+		"feelsType": "happy"
+	},
+	{
+		"id": "level_30",
+		"title": "Gurindam Dua Belas 3:2",
+		"author": "Raja Ali Haji",
+		"poems": [
+			"Apabila terpelihara kuping,",
+			"kabar yang jahat tiadalah damping."
+		],
+		"missSpell": [
+			"siap mendengarmu",
+			"percaya kepadamu"
+		],
+		"punchLine": 0,
+		"feelsType": "undefined"
+	},
+	{
+		"id": "level_31",
+		"title": "Gurindam Dua Belas 3:3",
+		"author": "Raja Ali Haji",
+		"poems": [
+			"Apabila terpelihara lidah,",
+			"niscaya dapat daripadanya faedah."
+		],
+		"missSpell": [
+			"ucapan manismu",
+			"ingat tiap janjimu"
+		],
+		"punchLine": 0,
+		"feelsType": "undefined"
+	},
+	{
+		"id": "level_32",
+		"title": "Gurindam Dua Belas 3:4",
+		"author": "Raja Ali Haji",
+		"poems": [
+			"Bersungguh-sungguh engkau memeliharakan tangan,",
+			"daripada segala berat dan ringan."
+		],
+		"missSpell": [
+			"lembut dan lemuh",
+			"memegang tanganku erat"
+		],
+		"punchLine": 0,
+		"feelsType": "undefined"
+	},
+	{
+		"id": "level_33",
+		"title": "Gurindam Dua Belas 3:5",
+		"author": "Raja Ali Haji",
+		"poems": [
+			"Apabila perut terlalu penuh,",
+			"keluarlah fiil yang tiada senunuh."
+		],
+		"missSpell": [
+			"asal bersamamu",
+			"asal dalam lingkup norma-norma"
+		],
+		"punchLine": 0,
+		"feelsType": "undefined"
+	},
+	{
+		"id": "level_34",
+		"title": "Gurindam Dua Belas 3:6",
+		"author": "Raja Ali Haji",
+		"poems": [
+			"Anggota tengah hendaklah ingat,",
+			"di situlah banyak orang yang hilang semangat. "
+		],
+		"missSpell": [
+			"turun ke hati",
+			"asal ada kamuu"
+		],
+		"punchLine": 0,
+		"feelsType": "undefined"
+	},
+	{
+		"id": "level_35",
+		"title": "Gurindam Dua Belas 3:7",
+		"author": "Raja Ali Haji",
+		"poems": [
+			"Hendaklah peliharakan kaki,",
+			"daripada berjalan yang membawa rugi."
+		],
+		"missSpell": [
+			"bersamamu mencari surga",
+			"bersamamu rintangi kelamnya negeri"
+		],
+		"punchLine": 2,
+		"feelsType": "sad"
+	},
+	{
+		"id": "level_36",
+		"title": "Pantun Conto",
+		"author": "tidak diketahui",
+		"poems": [
+			"Kalo loro ilang blengkere,",
+			"Blengkerana murih dadine;",
+			"Kanggo conto anak-putune,",
+			"Supaya nggak sengsara iku uripe.",
+			"Dua kalo hilang bingkainya,",
+			"Bingkailah agar baik jadinya;",
+			"Buatlah contoh anak-cucunya,",
+			"Agar tak sengsara nanti hidupnya."
+		],
+		"missSpell": [
+			"telu opat",
+			"ayu tenan",
+			"telada idup mati",
+			"",
+			"tiga buah bibir",
+			"bahan dasar jahilnya",
+			"masa depan dunia",
+			"untuk mereka"
+		],
+		"punchLine": 0,
+		"feelsType": "undefined"
+	},
+	{
+		"id": "level_37",
+		"title": "Wawangsalan 1",
+		"author": "tidak diketahui",
+		"poems": [
+			"Tak jelas monyet hitamnya,",
+			"Tak jelas ujungnya."
+		],
+		"missSpell": [
+			"hah gimana",
+			"kayaknya sih yang itu ya"
+		],
+		"punchLine": 2,
+		"feelsType": "happy"
+	},
+	{
+		"id": "level_38",
+		"title": "Mantra Singlar kepada Musuh",
+		"author": "tidak diketahui",
+		"poems": [
+			"Jatuhlah air dari atas,",
+			"turunlah dari awang-awang,",
+			"air dingin tanpa khawatir,",
+			"kalau hendak memusuhi si itu,",
+			"kalau hendak berbuat jahat kepada si dia,",
+			"anakku janganlah sampai."
+		],
+		"missSpell": [
+			"berkah terlalu suci",
+			"konon menyembunyikan khayangan",
+			"membakar kotormu",
+			"siapapun",
+			"apapun",
+			""
+		],
+		"punchLine": 4,
+		"feelsType": "angry"
+	},
+	{
+		"id": "level_39",
+		"title": "Kawih Menghitung Makanan",
+		"author": "tidak diketahui",
+		"poems": [
+			"Haji gula,",
+			"tebu i opak,",
+			"delima kesemek,",
+			"duku dadap,",
+			"salak sapu.",
+			"hiji dua,",
+			"tilu opat,",
+			"lima genep,",
+			"tujuh dalapan,",
+			"salapan sapuluh.",
+			"satu dua,",
+			"tiga empat,",
+			"lima enam,",
+			"tujuh delapan,",
+			"sembilan sepuluh."
+		],
+		"missSpell": [
+			"terbang meluncur jauh asal selamat,",
+			"yang manis itu dan apa,",
+			"buah-buahan ya akhirnya,",
+			"buah ini mah tahu,",
+			"salak sapu.",
+			"lah ganti bahasa,",
+			"ohh mulai mengerti,",
+			"lagi berhitung ya,",
+			"atau cuma menyebutkan saja,",
+			"dan ini terakhir.",
+			"lah berhitung lagi,",
+			"ayo sama-sama ulangi,",
+			"satu dua,",
+			"ti ti it ag ga ga tiga,",
+			"duar"
+		],
+		"punchLine": 7,
+		"feelsType": "happy"
+	},
+	{
+		"id": "level_40",
+		"title": "Seloka Mak Si Randang",
+		"author": "tidak diketahui",
+		"poems": [
+			"Baik budi emak si Randang,",
+			"Dagang lalu ditanakkan,",
+			"Tiada kayu rumah diruntuh,",
+			"Anak pulang kelaparan,",
+			"Anak dipangku diletakkan,",
+			"Kera di hutan disusui,",
+			"Dagang pergi awak terhutang,",
+			"Beras habis padi tak jadi,",
+			"Awak juga kecundangan."
+		],
+		"missSpell": [
+			"Dahulu-dahulu kala,",
+			"hidup mandiri,",
+			"maklumilah,",
+			"perjuangan,",
+			"pertanyaan,",
+			"kejanggalan,",
+			"kerja kerja kerja,",
+			"tapi kenapa?,",
+			"kenapa?"
+		],
+		"punchLine": 8,
+		"feelsType": "angry"
+	}
+]
