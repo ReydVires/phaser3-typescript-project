@@ -1,4 +1,6 @@
-import { Layer } from "../../utils/Layer";
+// import { Layer } from "../../utils/Layer";
+
+import { SCREEN_WIDTH, SCREEN_HEIGHT } from "../../config";
 
 export class Joystick extends Phaser.GameObjects.Sprite {
 
@@ -17,8 +19,7 @@ export class Joystick extends Phaser.GameObjects.Sprite {
 		scene.add.existing(this);
 		if (this.texture.frameTotal > 1) {
 			this.setFrame(1); // Implement base texture
-			this._controllerSprite = scene.add.sprite(x, y, textures, 0)
-				.setDepth(Layer.UI.SECOND);
+			this._controllerSprite = scene.add.sprite(x, y, textures, 0);
 			this._originalPosition = new Phaser.Geom.Point(x, y);
 			this._touchStart = false;
 			this.initTouchListener();
@@ -47,10 +48,11 @@ export class Joystick extends Phaser.GameObjects.Sprite {
 				const newDt = dt * 50;
 				this._gameObject.setVelocity(x * newDt, y * newDt);
 			}
-			else if (this._gameObject instanceof Phaser.GameObjects.Sprite) {
-				this._gameObject.setPosition(
-					this._gameObject.x + (x * dt),
-					this._gameObject.y + (y * dt)
+			else if (this._gameObject instanceof Phaser.GameObjects.GameObject) {
+				const target = <Phaser.GameObjects.Components.Transform> (this._gameObject as unknown);
+				target?.setPosition(
+					target.x + (x * dt),
+					target.y + (y * dt)
 				);
 			}
 		}
@@ -64,7 +66,7 @@ export class Joystick extends Phaser.GameObjects.Sprite {
 	}
 
 	private initTouchListener (): void {
-		const range = new Phaser.Geom.Rectangle(0, 0, 380, 640);
+		const range = new Phaser.Geom.Rectangle(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
 		this._touchScreenArea = this.scene.add.graphics();
 		this._touchScreenArea.fillStyle(0x000, 0)
 			.fillRectShape(range)
@@ -74,10 +76,8 @@ export class Joystick extends Phaser.GameObjects.Sprite {
 				this._originalAlpha = this.alpha;
 				this.setPosition(localX, localY)
 					.setAlpha(0.85);
-				// Set depth dependence
-				this._touchScreenArea.setDepth(Layer.UI.SECOND);
-				this._controllerSprite.setDepth(Layer.UI.FIRST - 1);
-				this.setDepth(Layer.UI.FIRST - 1);
+				// Reorder depth to be top
+				this._touchScreenArea.setDepth(0);
 			})
 			.on('pointermove', (pointer: PointerEvent, localX: number, localY: number) => {
 				if (this._touchStart) {
@@ -167,6 +167,15 @@ export class Joystick extends Phaser.GameObjects.Sprite {
 		this._controllerSprite?.setScrollFactor(value);
 		this._touchScreenArea?.setScrollFactor(value);
 		return this;
+	}
+
+	/**
+	 * @override
+	 */
+	public destroy (): void {
+		this._controllerSprite.destroy();
+		this._touchScreenArea.destroy();
+		super.destroy();
 	}
 
 }

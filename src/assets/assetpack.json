@@ -34,18 +34,13 @@
         ]
     },
     "spritesheetPack": {
-		"path": "assets/",
+		"path": "assets/img/",
 		"defaultType": "spritesheet",
         "files": [
             {
                 "key": "virtual_joystick",
-                "url": "UI/sheet_virtual_joystick.png",
+                "url": "spr_virtual_joystick.png",
                 "frameConfig": { "frameWidth": 128, "frameHeight": 128 }
-            },
-            {
-                "key": "arrow_focus",
-                "url": "UI/sheet_arrow_focus.png",
-                "frameConfig": { "frameWidth": 16, "frameHeight": 16 }
             }
         ]
 	},

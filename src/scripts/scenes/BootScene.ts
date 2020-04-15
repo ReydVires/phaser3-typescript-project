@@ -1,5 +1,5 @@
 import { GameManager } from "../components/GameManager";
-import { UserData } from "../objects/UserData";
+import { UserData } from "../gameobjects/UserData";
 
 export class BootScene extends Phaser.Scene {
 

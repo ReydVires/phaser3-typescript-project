@@ -1,14 +1,15 @@
 import { FlatButton } from '../components/UI/FlatButton';
 import { centerX, centerY } from '../config';
+import { BaseScene } from '../components/abstract/BaseScene';
 
-export class MenuScene extends Phaser.Scene {
+export class MenuViews extends BaseScene {
 
 	constructor () {
-		super('MenuScene');
+		super('MenuViews');
 	}
 
 	init (): void {
-		console.log(`MenuScene`);
+		console.log(`MenuViews`);
 		const titleText = `Wacana The Game`;
 		this.add
 			.text(centerX, centerY * 0.8, titleText, {
@@ -19,7 +20,7 @@ export class MenuScene extends Phaser.Scene {
 			.setAlign('center')
 			.setOrigin(0.5);
 			
-		const playBtn = new FlatButton(this, centerX, centerY * 1.25, 72, 48).justOnce();
+		const playBtn = new FlatButton(this, centerX, centerY * 1.25, 72, 48);
 		playBtn.onClick((sceneName: string) => {
 			this.scene.start(sceneName);
 		}, 'TestScene');

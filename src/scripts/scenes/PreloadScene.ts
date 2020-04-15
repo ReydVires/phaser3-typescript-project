@@ -53,7 +53,7 @@ export class PreloadScene extends Phaser.Scene {
 
 	onFinishLoading (): void {
 		this.load.off('progress', this.updateProgressbar.bind(this));
-		this.scene.start('MenuScene');
+		this.scene.start('MenuViews');
 	}
 
 	emitEventLoading (): void {

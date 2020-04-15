@@ -1,16 +1,10 @@
 import { BaseScene } from '../components/abstract/BaseScene';
 import { Helper } from '../utils/Helper';
-import { PhaserLogo } from '../objects/PhaserLogo';
 import { centerX, centerY, SCREEN_WIDTH } from '../config';
 import objectLevel from '../levels/objectLevel.json';
-import { Obstacle } from '../objects/Obstacle';
-import { TextObject } from '../objects/TextObject';
-
-interface TextInfo {
-	posX: number;
-	posY: number;
-	width: number;
-}
+import { Obstacle } from '../gameobjects/Obstacle';
+import { TextObject } from '../gameobjects/TextObject';
+import { PhaserLogo } from '../gameobjects/PhaserLogo';
 
 export class TestScene extends BaseScene {
 

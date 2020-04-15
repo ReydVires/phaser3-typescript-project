@@ -1,7 +1,7 @@
 import { UIScene } from "../components/abstract/UIScene";
 import { Joystick } from "../components/UI/Joystick";
 import { centerX, centerY } from "../config";
-import { FPSText } from "../objects/FPSText";
+import { FPSText } from "../gameobjects/FPSText";
 
 export class UITestScene extends UIScene {
 

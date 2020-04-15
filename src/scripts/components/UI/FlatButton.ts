@@ -1,11 +1,12 @@
-export class FlatButton extends Phaser.GameObjects.Rectangle {
+import { ILabel } from "../interface/ILabel";
+
+export class FlatButton extends Phaser.GameObjects.Rectangle implements ILabel {
 
 	private _label: Phaser.GameObjects.Text;
 	private _callback: Function;
 	private _argument: unknown;
 	private _pressed: boolean;
 	private _disable: boolean;
-	private _justOnce: boolean;
 
 	constructor (scene: Phaser.Scene, x: number, y: number, width?: number, height?: number) {
 		super(scene, x, y, width, height);
@@ -23,11 +24,11 @@ export class FlatButton extends Phaser.GameObjects.Rectangle {
 
 	private initLabel (): void {
 		this._label = this.scene.add.text(this.x, this.y, '', 
-		<Phaser.Types.GameObjects.Text.TextStyle> {
-			color: '#636e72',
-			fontSize: '32px',
-			align: 'center'
-		});
+			<Phaser.Types.GameObjects.Text.TextStyle> {
+				color: '#636e72',
+				fontSize: '32px',
+				align: 'center'
+			});
 		this._label.setOrigin(this.originX, this.originY);
 	}
 
@@ -53,11 +54,7 @@ export class FlatButton extends Phaser.GameObjects.Rectangle {
 		this.setAlpha(1);
 		if (this._pressed) {
 			this._pressed = false;
-			this.scene.time
-				.delayedCall(25, this._callback.bind(this, this._argument));
-			if (this._justOnce) {
-				this.setDisable(true);
-			}
+			this.scene.time.delayedCall(25, this._callback.bind(this, this._argument));
 		}
 	}
 
@@ -74,7 +71,7 @@ export class FlatButton extends Phaser.GameObjects.Rectangle {
 		}
 	}
 
-	public get label (): Phaser.GameObjects.Text {
+	public getLabel(): Phaser.GameObjects.Text {
 		return this._label;
 	}
 
@@ -83,11 +80,6 @@ export class FlatButton extends Phaser.GameObjects.Rectangle {
 		if (style) {
 			this._label?.setStyle(style);
 		}
-		return this;
-	}
-
-	public justOnce (value: boolean = true): this {
-		this._justOnce = value;
 		return this;
 	}
 
@@ -116,9 +108,9 @@ export class FlatButton extends Phaser.GameObjects.Rectangle {
 	/**
 	 * @override
 	 */
-	public setDepth (value: number): this {
-		super.setDepth(value);
-		this._label?.setDepth(value);
+	public setPosition (x: number, y?: number, z?: number): this {
+		super.setPosition(x, y, z);
+		this._label?.setPosition(x, y, z);
 		return this;
 	}
 
@@ -127,7 +119,7 @@ export class FlatButton extends Phaser.GameObjects.Rectangle {
 	 */
 	public setVisible (value: boolean): this {
 		super.setVisible(value);
-		this._label.setVisible(value);
+		this._label?.setVisible(value);
 		return this;
 	}
 
@@ -143,10 +135,36 @@ export class FlatButton extends Phaser.GameObjects.Rectangle {
 	/**
 	 * @override
 	 */
+	public setScale (value: number): this {
+		super.setScale(value);
+		this._label?.setScale(value);
+		return this;
+	}
+
+	/**
+	 * @override
+	 */
+	public setDepth (value: number): this {
+		super.setDepth(value);
+		this._label?.setDepth(value);
+		return this;
+	}
+
+	/**
+	 * @override
+	 */
 	public setScrollFactor (value: number): this {
 		super.setScrollFactor(value);
 		this._label?.setScrollFactor(value);
 		return this;
+	}
+
+	/**
+	 * @override
+	 */
+	public destroy (): void {
+		this._label?.destroy();
+		super.destroy();
 	}
 
 }

@@ -14,8 +14,12 @@ export abstract class BaseScene extends Phaser.Scene implements IEventHandler, I
 	/**
 	 * @override
 	 */
-	init (data?: object): void {
-		this.scene.launch("UI" + this.scene.key);
+	init (): void {
+		const UIKey = "UI" + this.scene.key;
+		const UISceneAvailable = this.scene.get(UIKey);
+		if (UISceneAvailable) {
+			this.scene.launch(UIKey);
+		}
 		this._eventHandler = new EventHandler(this.events);
 	}
 
