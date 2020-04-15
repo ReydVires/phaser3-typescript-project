@@ -18,7 +18,9 @@ export class PreloadScene extends Phaser.Scene {
 
 	preload (): void {
 		this.createLoadingBar(centerX, centerY, 12, 32);
-		this.load.pack('imagePack', 'assets/assetpack.json', 'imagePack');
+		this.load.pack('image', 'assets/assetpack.json', 'imagePack');
+		this.load.pack('sprite', 'assets/assetpack.json', 'spritePack');
+		this.load.pack('spritesheet', 'assets/assetpack.json', 'spritesheetPack');
 	}
 
 	create (): void {
@@ -49,15 +51,15 @@ export class PreloadScene extends Phaser.Scene {
 		);
 	}
 
+	onFinishLoading (): void {
+		this.load.off('progress', this.updateProgressbar.bind(this));
+		this.scene.start('MenuScene');
+	}
+
 	emitEventLoading (): void {
 		this._progressBar = this.add.graphics();
-
 		this.load.on('progress', this.updateProgressbar.bind(this));
-		this.load.once('complete', () => {
-			this.load.off('progress', this.updateProgressbar.bind(this));
-			this.scene.start('MenuScene');
-			this._progressBar.destroy(); // Experiment
-		});
+		this.load.once('complete', this.onFinishLoading.bind(this));
 	}
 
 	createLoadingText (x: number, y: number, height: number, text: string): void {

@@ -9,7 +9,7 @@ export class MenuScene extends Phaser.Scene {
 
 	init (): void {
 		console.log(`MenuScene`);
-		const titleText = `Welcome to\nPhaser v${Phaser.VERSION}`;
+		const titleText = `Wacana The Game`;
 		this.add
 			.text(centerX, centerY * 0.8, titleText, {
 				color: '#000000',
@@ -19,11 +19,11 @@ export class MenuScene extends Phaser.Scene {
 			.setAlign('center')
 			.setOrigin(0.5);
 			
-		const flatBtn = new FlatButton(this, centerX, centerY * 1.25);
-		flatBtn.onClick((sceneName: string) => {
+		const playBtn = new FlatButton(this, centerX, centerY * 1.25, 72, 48).justOnce();
+		playBtn.onClick((sceneName: string) => {
 			this.scene.start(sceneName);
 		}, 'TestScene');
-		flatBtn.setText("PLAY");
+		playBtn.setText("PLAY", { fontSize: '20px' });
 	}
 
 	create (): void {}

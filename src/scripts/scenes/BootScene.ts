@@ -1,3 +1,6 @@
+import { GameManager } from "../components/GameManager";
+import { UserData } from "../objects/UserData";
+
 export class BootScene extends Phaser.Scene {
 
 	constructor () {
@@ -6,6 +9,10 @@ export class BootScene extends Phaser.Scene {
 
 	init (): void {
 		console.log(`BootScene`);
+		const gameManager = GameManager.instance();
+		gameManager.register<UserData>('userdata', new UserData('debug'));
+		const userData = gameManager.service<UserData>('userdata');
+		console.log(userData.toObject());
 	}
 
 	create (): void {
