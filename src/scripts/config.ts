@@ -3,7 +3,7 @@ import { BootScene } from './scenes/BootScene';
 import { PreloadScene } from './scenes/PreloadScene';
 import { MenuViews } from './scenes/MenuViews';
 import { TestScene } from './test/scenes/TestScene';
-import { UITestScene } from './test/scenes/UITestScene';
+import { TestUIScene } from './test/scenes/TestUIScene';
 
 //#endregion
 
@@ -17,7 +17,7 @@ const scenes: Array<Function> = [
 	PreloadScene,
 	MenuViews,
 	TestScene,
-	UITestScene
+	TestUIScene
 ];
 
 export const Config: Phaser.Types.Core.GameConfig = {
