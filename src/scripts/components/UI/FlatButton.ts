@@ -83,7 +83,7 @@ export class FlatButton extends Phaser.GameObjects.Rectangle implements ILabel {
 		return this;
 	}
 
-	public onClick (callback: Function, arg?: unknown): this {
+	public setCallback (callback: Function, arg?: unknown): this {
 		this._argument = arg;
 		this._callback = (typeof callback === 'function') ? callback :
 			() => console.log("Default");
