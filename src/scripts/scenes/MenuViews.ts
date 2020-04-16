@@ -22,8 +22,8 @@ export class MenuViews extends BaseScene {
 			.setOrigin(0.5);
 			
 		const flatBtn = new FlatButton(this, centerX, centerY * 1.25);
-		flatBtn.onClick((sceneName: string) => {
-			this.scene.start(sceneName);
+		flatBtn.setCallback((sceneName: string) => {
+			this.startToScene(sceneName);
 		}, 'TestScene');
 		flatBtn.setText("PLAY");
 	}
