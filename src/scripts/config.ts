@@ -2,8 +2,8 @@
 import { BootScene } from './scenes/BootScene';
 import { PreloadScene } from './scenes/PreloadScene';
 import { MenuViews } from './scenes/MenuViews';
-import { TestScene } from './scenes/TestScene';
-import { UITestScene } from './scenes/UITestScene';
+import { TestScene } from './test/scenes/TestScene';
+import { UITestScene } from './test/scenes/UITestScene';
 
 //#endregion
 
