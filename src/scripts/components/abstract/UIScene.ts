@@ -8,6 +8,7 @@ export abstract class UIScene extends Phaser.Scene implements IEventHandler, ISc
 	private _baseSceneKey: string;
 	private _baseScene: BaseScene;
 	private _prefixID: string = 'UI';
+	private _postfixID: string = 'UIScene';
 	private _isPause: boolean;
 
 	constructor(key: string) {
@@ -16,11 +17,12 @@ export abstract class UIScene extends Phaser.Scene implements IEventHandler, ISc
 		this._isPause = false;
 	}
 
-	private evaluateSceneKey (key: string): string {
-		const keyValid = key.length > 3;
-		const regexValid = key.indexOf(this._prefixID) === 0;
-		console.assert(keyValid && regexValid, "BaseScene key is invalid, and will not be synchronized!");
-		return (keyValid && regexValid) ? key.slice(2, key.length) : "";
+	private evaluateSceneKey (key: string, postfixScene: string = 'Scene'): string {
+		const keyValid = key.length > this._postfixID.length;
+		const regexValid = key.indexOf(this._postfixID) !== -1;
+		console.assert(keyValid && regexValid, "This UIScene key not valid, and will not be synchronized!");
+		return (keyValid && regexValid) ?
+			(key.slice(0, key.length - this._postfixID.length) + postfixScene) : '';
 	}
 
 	registerEvent(key: string, value: Function, once?: boolean | undefined): void {
