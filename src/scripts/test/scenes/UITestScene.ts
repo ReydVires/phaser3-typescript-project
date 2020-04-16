@@ -1,12 +1,12 @@
-import { UIScene } from "../components/abstract/UIScene";
-import { FPSText } from "../gameobjects/FPSText";
-import { ToggleButton } from "../components/UI/ToggleButton";
-import { TapButton } from "../components/UI/TapButton";
-import { Button } from "../components/UI/Button";
-import { HoldButton } from "../components/UI/HoldButton";
-import { Joystick } from "../components/UI/Joystick";
-import { GameManager } from "../components/GameManager";
-import { UserData } from "../components/UserData";
+import { UIScene } from "../../components/abstract/UIScene";
+import { FPSText } from "../../gameobjects/FPSText";
+import { TapButton } from "../../components/UI/TapButton";
+import { GameManager } from "../../components/GameManager";
+import { UserData } from "../../components/UserData";
+import { Button } from "../../components/UI/Button";
+import { HoldButton } from "../../components/UI/HoldButton";
+import { Joystick } from "../../components/UI/Joystick";
+import { ToggleButton } from "../../components/UI/ToggleButton";
 
 export class UITestScene extends UIScene {
 
