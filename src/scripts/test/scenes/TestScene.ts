@@ -1,6 +1,6 @@
-import { PhaserLogo } from '../gameobjects/PhaserLogo';
-import { BaseScene } from '../components/abstract/BaseScene';
-import { centerX, centerY } from '../config';
+import { PhaserLogo } from '../../gameobjects/PhaserLogo';
+import { BaseScene } from '../../components/abstract/BaseScene';
+import { centerX, centerY } from '../../config';
 
 export class TestScene extends BaseScene {
 
