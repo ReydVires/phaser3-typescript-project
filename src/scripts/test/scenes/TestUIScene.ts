@@ -8,17 +8,17 @@ import { HoldButton } from "../../components/UI/HoldButton";
 import { Joystick } from "../../components/UI/Joystick";
 import { ToggleButton } from "../../components/UI/ToggleButton";
 
-export class UITestScene extends UIScene {
+export class TestUIScene extends UIScene {
 
 	private _fpsText: FPSText;
 
 	constructor () {
-		super('UITestScene');
+		super('TestUIScene');
 	}
 
 	init (): void {
 		super.init();
-		console.log("Create UITestScene!");
+		console.log("TestUIScene!");
 	}
 
 	create (): void {

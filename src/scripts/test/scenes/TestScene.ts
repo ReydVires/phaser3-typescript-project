@@ -12,7 +12,7 @@ export class TestScene extends BaseScene {
 
 	init (): void {
 		super.init();
-		console.log(`Create TestScene`);
+		console.log(`TestScene`);
 	}
 
 	create (): void {
