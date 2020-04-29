@@ -18,6 +18,7 @@ export class PreloadScene extends Phaser.Scene {
 
 	preload (): void {
 		this.createLoadingBar(centerX, centerY, 12, 32);
+		// TODO: Make separate json for every asset pack
 		this.load.pack('images', 'assets/assetpack.json', 'imagePack');
 		this.load.pack('spritesheets', 'assets/assetpack.json', 'spritesheetPack');
 	}

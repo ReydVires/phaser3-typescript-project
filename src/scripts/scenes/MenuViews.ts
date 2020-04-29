@@ -8,8 +8,8 @@ export class MenuViews extends BaseScene {
 		super('MenuViews');
 	}
 
-	init (): void {
-		super.init();
+	init (data: object): void {
+		super.init(data);
 		console.log(`MenuViews`);
 		const titleText = `Welcome to\nPhaser v${Phaser.VERSION}`;
 		this.add
