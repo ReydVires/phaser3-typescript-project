@@ -1,5 +1,3 @@
-// import { Layer } from "../../utils/Layer";
-
 import { SCREEN_WIDTH, SCREEN_HEIGHT } from "../../config";
 
 export class Joystick extends Phaser.GameObjects.Sprite {
