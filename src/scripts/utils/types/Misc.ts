@@ -1,0 +1,1 @@
+export type GameObjectTrasform = Phaser.GameObjects.GameObject & Phaser.GameObjects.Components.Transform;

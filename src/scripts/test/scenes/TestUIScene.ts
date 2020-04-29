@@ -1,8 +1,8 @@
 import { UIScene } from "../../components/abstract/UIScene";
 import { FPSText } from "../../gameobjects/FPSText";
 import { TapButton } from "../../components/UI/TapButton";
-import { GameManager } from "../../components/GameManager";
-import { UserData } from "../../components/UserData";
+import { GameManager } from "../../components/gamemanager/GameManager";
+import { UserData } from "../../components/gamemanager/UserData";
 import { Button } from "../../components/UI/Button";
 import { HoldButton } from "../../components/UI/HoldButton";
 import { Joystick } from "../../components/UI/Joystick";
@@ -23,6 +23,7 @@ export class TestUIScene extends UIScene {
 
 	create (): void {
 		this._fpsText = new FPSText(this);
+
 		new TapButton(this, 475, 256, 'phaser_logo')
 			.setText("TESTING", { fontStyle: 'bold' })
 			.setCallback(() => {
@@ -30,6 +31,7 @@ export class TestUIScene extends UIScene {
 				console.log("inspect UserData:", userData.toString());
 				userData.setScore(userData.score + 10);
 			});
+
 		const btn = new Button(this, 180, 460, 'phaser-logo', 'phaser_logo')
 			.setText("CLICK ME!", { fontStyle: 'bold' })
 			.setCallback(() => {
@@ -37,9 +39,12 @@ export class TestUIScene extends UIScene {
 				this.eventHandler.emit('event#set_to_control');
 			});
 		btn.getLabel().setFontSize(28);
+
 		new HoldButton(this, 360, 1040, 'phaser-logo');
+
 		const joystick = new Joystick(this, 360, 640, 'virtual_joystick')
 			.setToControl(this._fpsText);
+
 		new ToggleButton(this, 180, 256, { active: 'phaser-logo', deactive: 'phaser_logo' }, true)
 			.setCallback((value: boolean) => {
 				joystick.setActive(value);
