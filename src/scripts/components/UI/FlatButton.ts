@@ -54,7 +54,7 @@ export class FlatButton extends Phaser.GameObjects.Rectangle implements ILabel {
 		this.setAlpha(1);
 		if (this._pressed) {
 			this._pressed = false;
-			this.scene.time.delayedCall(25, this._callback.bind(this, this._argument));
+			this.scene.time.delayedCall(25, this._callback?.bind(this, this._argument));
 		}
 	}
 
@@ -67,7 +67,7 @@ export class FlatButton extends Phaser.GameObjects.Rectangle implements ILabel {
 
 	private handleOver (pointer: Phaser.Input.Pointer): void {
 		if (!this._disable) {
-			this.setAlpha(0.825);
+			this.setAlpha(0.925);
 		}
 	}
 
