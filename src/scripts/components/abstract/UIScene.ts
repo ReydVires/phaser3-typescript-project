@@ -40,7 +40,7 @@ export abstract class UIScene extends Phaser.Scene implements IEventHandler, ISc
 	/**
 	 * @override
 	 */
-	init (): void {
+	init (data?: object): void {
 		this._baseScene = this.scene.get(this._baseSceneKey) as BaseScene;
 	}
 
