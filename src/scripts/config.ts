@@ -31,6 +31,9 @@ export const Config: Phaser.Types.Core.GameConfig = {
 		width: SCREEN_WIDTH,
 		height: SCREEN_HEIGHT
 	},
+	// input: {
+	// 	activePointers: 3
+	// },
 	dom: {
 		createContainer: true
 	},
@@ -45,5 +48,9 @@ export const Config: Phaser.Types.Core.GameConfig = {
 	render: {
 		pixelArt: false,
 		antialias: false
-	}
+	},
+	// fps: {
+	// 	target: 60,
+	// 	forceSetTimeOut: false // true
+	// },
 };
