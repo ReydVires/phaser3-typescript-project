@@ -44,7 +44,7 @@ export class TapButton extends Phaser.GameObjects.Image implements ILabel {
 
 	private onClick (): void {
 		this.scene.time.addEvent({
-			delay: 25,
+			delay: 30,
 			callback: () => {
 				if (this._callback) {
 					this._callback(this._argument);
@@ -57,7 +57,8 @@ export class TapButton extends Phaser.GameObjects.Image implements ILabel {
 	}
 
 	private onDown (): void {
-		this.setScale(0.9);
+		const onSizeRatio = (this.displayWidth > 64) && (this.displayHeight > 64);
+		this.setScale(onSizeRatio ? 0.9 : 0.85);
 	}
 
 	private onUp (): void {
