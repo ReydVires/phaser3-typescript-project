@@ -11,8 +11,8 @@ export class FlatButton extends Phaser.GameObjects.Rectangle implements ILabel {
 	constructor (scene: Phaser.Scene, x: number, y: number, width?: number, height?: number) {
 		super(scene, x, y, width, height);
 		scene.add.existing(this);
-		const defaultWidth = width ? width : 128;
-		const defaultHeight = height ? height: 64;
+		const defaultWidth = width || 128;
+		const defaultHeight = height || 64;
 		this.setDisplaySize(defaultWidth, defaultHeight);
 		this.setOrigin(0.5);
 		this.initStyle();
