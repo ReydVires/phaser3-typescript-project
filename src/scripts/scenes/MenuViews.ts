@@ -1,6 +1,6 @@
-import { FlatButton } from '../components/UI/FlatButton';
 import { centerX, centerY } from '../config';
 import { BaseScene } from '../components/abstract/BaseScene';
+import { GraphicsButton } from '../components/UI/GraphicsButton';
 
 export class MenuViews extends BaseScene {
 
@@ -19,12 +19,11 @@ export class MenuViews extends BaseScene {
 			})
 			.setAlign('center')
 			.setOrigin(0.5);
-			
-		const playBtn = new FlatButton(this, centerX, centerY * 1.25, 72, 48);
-		playBtn.onClick((sceneName: string) => {
-			this.scene.start(sceneName);
-		}, 'TestScene');
-		playBtn.setText("PLAY", { fontSize: '20px' });
+
+		const playButton = new GraphicsButton(this, centerX, centerY * 1.25, 'PLAY');
+		playButton.onClick(() => {
+			this.scene.start('TestScene');
+		});
 	}
 
 	create (): void {}
