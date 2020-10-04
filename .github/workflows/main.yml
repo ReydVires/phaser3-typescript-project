@@ -27,6 +27,7 @@ jobs:
           mkdir build-test
           xcopy dist build-test /r /e /Y
 
-      - uses: actions/download-artifact@v2
+      - uses: actions/upload-artifact@v2
         with:
-          path: build-test
+          name: my-artifact
+          path: build-test/
