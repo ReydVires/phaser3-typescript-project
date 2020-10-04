@@ -24,10 +24,13 @@ jobs:
         run: |
           npm install
           npm run build
-          mkdir build-test
-          xcopy dist build-test /r /e /Y
+          mkdir build-temp
+          xcopy dist build-temp /r /e /Y
 
       - uses: actions/upload-artifact@v2
         with:
-          name: my-artifact
-          path: build-test/
+          name: build
+          path: build-temp/
+
+      - name: Clean up
+        run: rmdir build-temp /S /Q & rmdir node_modules /S /Q
