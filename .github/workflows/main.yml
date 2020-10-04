@@ -31,6 +31,3 @@ jobs:
         with:
           name: build
           path: build-temp/
-
-      - name: Clean up
-        run: rmdir build-temp /S /Q
