@@ -37,7 +37,7 @@ jobs:
       runs-on: Windows
       steps:
         - name: Move to deploy
-          run: xcopy build-temp firebase_hosting/public /r /e /Y
+          run: xcopy build-temp firebase_hosting\public /r /e /Y
         - name: Deploy to Firebase
           run: |
             npm install -g firebase-tools
