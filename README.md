@@ -1,5 +1,7 @@
 # Phaser 3 Typescript Project
 
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/reydvires/phaser3-typescript-project/Test-CI)
+
 ## Getting Started
 
 Do `npm install` then `npm start`!
