@@ -37,7 +37,7 @@ jobs:
       runs-on: Windows
       steps:
         - name: Preparing deploy
-          run: xcopy dist firebase_hosting\public /r /e /Y
+          run: xcopy dist firebase_hosting\public\test_deploy /r /e /Y
         - name: Deploy to Firebase
           run: |
             npm install -g firebase-tools
